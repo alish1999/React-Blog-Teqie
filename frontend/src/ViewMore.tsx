@@ -1,11 +1,17 @@
 import * as React from "react"
-
-export default function ViewMore(props)
+import {useSelector } from "react-redux"
+import Navigator from "./Navigator";
+import NavBar from "./NavBar";
+export default function ViewMore()
 {
-    console.log(props.dat);
+    const viewById = useSelector((state : any) => state.viewById)
+
+    console.log();
     return(
-        
-        <div className="card--tit">{props.dat}</div>
-        
+        <div>
+        <NavBar/>
+        <Navigator/>
+        <div>CARD ID : {viewById}</div>
+        </div>
     )
 }

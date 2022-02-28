@@ -14,7 +14,7 @@ export default function Login()
         <NavBar />
         <div className="login">
         
-        <input  type="text" title="UPUSER" placeholder={myState} onChange={(e) => dispatch({type:"SETUSER",payload:e.target.value})} />
+        <input  type="text" placeholder={myState} onChange={(e) => dispatch({type:"SETUSER",payload:e.target.value})} />
         
         <button onClick={() => dispatch({type:"LOG"})}  >set LOGIN </button>
         <button onClick={() => dispatch({type:"LOGOUT"})}  >set LOGOUT</button>

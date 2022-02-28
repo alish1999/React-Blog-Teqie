@@ -9,8 +9,12 @@ export default function Navigator()
             <Link to="/main">Home</Link>
         </li>
         <li className="navigator--text">
-            <Link to="/cart">View Drafts</Link>
+            <Link to="/viewdrafts">View Drafts</Link>
         </li>
+        <li className="navigator--text">
+            <Link to="/create">Create Blog</Link>
+        </li>
+
        
 
     </ul>
