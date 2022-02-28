@@ -10,6 +10,7 @@ const getAllProducts = async(req,res) =>{
         res.status(500).json({message: "server error while getallpost"})
 
     }
+}
     const getProductById = async(req,res) =>{
         try{
             const products = await Product.findById(req.params.id);
@@ -22,7 +23,7 @@ const getAllProducts = async(req,res) =>{
         }
     }
 
-}
+
 module.exports ={
     getAllProducts,
     getProductById
