@@ -5,7 +5,6 @@ const products = [
         isDraft: 0,
         title: "Mount Fuji",
         authorName: "Samuel",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "12 Jan, 2021",
        
         description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
@@ -17,7 +16,6 @@ const products = [
         isDraft: 0,
         title: "Sydney opera house",
         authorName: "Jim",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "23 ads, 2021",
         
         description: "its nice",
@@ -30,7 +28,6 @@ const products = [
         isDraft: 0,
         title: "Mount",
         authorName: "Japns",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "12 Jan, 2021",
         endDate: "24 Jan, 2021",
         description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
@@ -43,7 +40,6 @@ const products = [
         isDraft: 1,
         title: "asd",
         authorName: "Japan",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "12 Jan, 2021",
        
         description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
@@ -56,7 +52,6 @@ const products = [
         isDraft: 1,
         title: "Sfdg",
         authorName: "Australia",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "23 ads, 2021",
         
         description: "its nice",
@@ -69,7 +64,6 @@ const products = [
         isDraft: 0,
         title: "cvb",
         authorName: "Japns",
-        googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         createdDate: "12 Jan, 2021",
         
         description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",

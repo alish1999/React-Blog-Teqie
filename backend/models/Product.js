@@ -23,11 +23,7 @@ const productSchema =new mongoose.Schema(
             type: String,
             required: true
         },
-        googleMapsUrl: {
-            type: String,
-            required: true
-        },
-       
+      
         createdDate: {
             type: String,
             required: true,

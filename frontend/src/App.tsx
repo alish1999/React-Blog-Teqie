@@ -2,7 +2,6 @@ import * as React from "react"
 
 import Main from "./Main"
 import Login from "./Login"
-import ProductScreen from "./ProductScreen"
 import CreateBlog from "./CreateBlog"
 import {Route, Routes } from 'react-router-dom';
 import ViewMore from "./ViewMore"
@@ -19,7 +18,6 @@ export default function App()
         
     <Routes>
             <Route path="/" element={  <Login/>  } />
-            <Route path="/product/:id" element={<ProductScreen/> }/>
             <Route path="/main" element={<Main/>} />
             <Route path="/create" element={<CreateBlog/>} />
             <Route path="/viewdrafts" element={<ViewDrafts/>} />

@@ -5,14 +5,14 @@ export default function Navigator()
 {
     return(
     <ul className="navBar--navigator">
-         <li className="navigator--text">
-            <Link to="/main">Home</Link>
+         <li >
+            <Link className="navigator--text" to="/main">Home</Link>
         </li>
-        <li className="navigator--text">
-            <Link to="/viewdrafts">View Drafts</Link>
+        <li >
+            <Link className="navigator--text" to="/viewdrafts">View Drafts</Link>
         </li>
-        <li className="navigator--text">
-            <Link to="/create">Create Blog</Link>
+        <li >
+            <Link className="navigator--text" to="/create">Create Blog</Link>
         </li>
 
        
