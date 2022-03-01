@@ -42,8 +42,8 @@ export default function CreateBlog()
         <form className="form-group">
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
-            <option value={"1"}>draft</option>
             <option value={"0"}>post</option>
+            <option value={"1"}>draft</option>
         </select>
         title<input className="form-control" name="title" onChange={handleChange}></input>
         authorname<input className="form-control" name="authorName" onChange={handleChange}></input>
