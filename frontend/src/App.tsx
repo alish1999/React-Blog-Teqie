@@ -21,7 +21,7 @@ export default function App()
             <Route path="/main" element={<Main/>} />
             <Route path="/create" element={<CreateBlog/>} />
             <Route path="/viewdrafts" element={<ViewDrafts/>} />
-            <Route path="/viewmore" element={<ViewMore/>} />
+            <Route path="/viewmore/:id" element={<ViewMore/>} />
     </Routes>
    
     

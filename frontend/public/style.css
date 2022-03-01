@@ -150,6 +150,33 @@ height: 70px;
     margin-right: 10px;
     
 }
+.view{
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   width: 90vw;
+   height: 100vw;
+   left: 0px;
+   top: 50px;
+   
+   outline:auto;
+   background-color:aliceblue;
+   padding:150px;
+}
+.view--par{
+    position: absolute;
+width: 70vw;
+height: 45px;
+left: 184px;
+top: 203px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 25.24px;
+line-height: 150%;
+}
 .card
 {
  display: flex;

@@ -53,7 +53,6 @@ export default function Main()
 
             <NavBar/>
             <Navigator/>
-            <button onClick={() =>console.log(datab)}>fetch</button>
            {//isLogged &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>

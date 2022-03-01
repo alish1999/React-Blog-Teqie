@@ -18,7 +18,7 @@ export default function ViewMore()
 
     })
     useEffect(()=>{
-        fetch(`/:${viewById}`).then(res=>{
+        fetch(`/${viewById}`).then(res=>{
             if(res.ok){
                 return res.json()
             }
@@ -29,8 +29,16 @@ export default function ViewMore()
         <div>
         <NavBar/>
         <Navigator/>
-         <button onClick={() =>console.log(datab)}>fetch</button>
-        <div>CARD ID : {viewById}</div>
+        <div className="view">
+        <img className="card--img" src={datab.imageUrl} />  
+        {datab.isDraft=="1" && <img className="card--logo" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        <p className="card--text">author-id:{datab.aid} </p>
+        
+        <div className="card--tit">{datab.title}</div>
+        <div className="card--dat">{datab.createdDate}</div>
+        <p className="view--par">{datab.description}</p>
+        <hr />
+        </div>
         </div>
     )
 }

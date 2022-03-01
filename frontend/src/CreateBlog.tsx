@@ -20,7 +20,7 @@ export default function CreateBlog()
     {
        event.preventDefault();
        
-       //const newBlog={input}
+       
        console.log(input)
        axios.post('http://localhost:5000/create',input)
 
@@ -43,7 +43,10 @@ export default function CreateBlog()
         <form className="form-group">
         id<input onChange={handleChange} name="id"  className="form-control" ></input>
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
-        isDraft<input className="form-control" name="isDraft" onChange={handleChange}></input>
+        isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
+            <option value={"1"}>draft</option>
+            <option value={"0"}>post</option>
+        </select>
         title<input className="form-control" name="title" onChange={handleChange}></input>
         authorname<input className="form-control" name="authorName" onChange={handleChange}></input>
         createddate<input className="form-control" name="createdDate" onChange={handleChange} type="datetime-local"></input>
