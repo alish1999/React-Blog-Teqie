@@ -1,21 +1,38 @@
 import NavBar from "./NavBar"
 import Card from "./Card"
-import datarr from "./data"
 import Navigator from "./Navigator"
 import { useSelector } from "react-redux"
+import { useState,useEffect } from "react"
 
 export default function Main()
 {
     //const myState = useSelector((state : any) => state.changeTheUser);
         const isLogged =useSelector((state : any)=>  state.logStatus)
-
-    const blogs = datarr.map(item =>
+    const [datab,setBlogs]=useState([{
+            id:"",
+            aid:"",
+            isDraft:"",
+            title:"",
+            authorName:"",
+            createdDate:"",
+            description:"",
+            imageUrl:"",
+    
+        }])
+        useEffect(()=>{
+            fetch("/allblogs").then(res=>{
+                if(res.ok){
+                    return res.json()
+                }
+            }).then(jsonRes=>setBlogs(jsonRes))
+        })
+    const blogs = datab.map(item =>
     {
         return(
            
             <div>
             {
-            (item.isDraft==0 && 
+            (item.isDraft=="0"&& 
             <li> 
                 <Card  
                     key={item.id}
@@ -36,6 +53,7 @@ export default function Main()
 
             <NavBar/>
             <Navigator/>
+            <button onClick={() =>console.log(datab)}>fetch</button>
            {//isLogged &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>

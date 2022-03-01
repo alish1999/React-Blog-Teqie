@@ -12,8 +12,8 @@ function ViewMr()
     return(
     <div className="card"  >
         <img className="card--img" src={props.imageUrl} />  
-        <img className="card--logo" src="https://w7.pngwing.com/pngs/169/109/png-transparent-black-and-red-authorName-app-icon-drawing-pin-world-map-logo-push-heart-pin-world.png" />
-        <p className="card--text">author id: {props.aid}</p>
+        {props.isDraft=="1" && <img className="card--logo" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        <p className="card--text">blog-id:{props.id}|author-id:{props.aid} </p>
         <a className="card--link" onClick={() => dispatch({type:"GETBLOG",payload:props.id})}><Link to="/viewmore">View More</Link></a>
         
         <div className="card--tit">{props.title}</div>

@@ -3,15 +3,15 @@ const mongoose =require("mongoose");
 const productSchema =new mongoose.Schema(
     {
         id: {
-            type: Number,
+            type: String,
             required:true  
         },
         aid: {
-            type: Number,
+            type: String,
             required:true  
         },
         isDraft: {
-            type: Number,
+            type: String,
             default: 0,
             required:true
         },
@@ -39,6 +39,6 @@ const productSchema =new mongoose.Schema(
         
     }
 )
-const Product = mongoose.model('product', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
 module.exports= Product;

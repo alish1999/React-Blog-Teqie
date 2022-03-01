@@ -6,8 +6,8 @@ const getAllProducts = async(req,res) =>{
         res.json(products)
     }catch(error)
     {
-        console.erorr(error);
-        res.status(500).json({message: "server error while getallpost"})
+        console.log(error);
+        res.status(500).json({message: "server error while getallProduct"})
 
     }
 }
@@ -17,14 +17,27 @@ const getAllProducts = async(req,res) =>{
             res.json(products)
         }catch(error)
         {
-            console.erorr(error);
-            res.status(500).json({message: "server error while getallpost"})
+            console.log(error);
+            res.status(500).json({message: "server error while getbyid"})
     
+        }
+    }
+    const createProduct = async (req,res) => {
+    
+        try {
+            console.log("Product create");
+            const Prod = await new Product(req.body);
+            Prod.save();
+    
+            res.status(200).json('Product saved successfully');
+        } catch (error) {
+            res.status(500).json(error);
         }
     }
 
 
 module.exports ={
     getAllProducts,
-    getProductById
+    getProductById,
+    createProduct
 };
