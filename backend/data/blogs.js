@@ -1,4 +1,4 @@
-const products = [
+const blogs = [
     {
         id: "1",
         aid:"2",
@@ -71,4 +71,4 @@ const products = [
     }
 ]
 
-module.exports =products;
+module.exports =blogs;

@@ -1,6 +1,6 @@
 require('dotenv').config();
 const connectDB= require('./config/db');
-const productRoutes =require('./routes/productRoutes');
+const blogRoutes =require('./routes/blogRoutes');
 const express = require('express');
 const cors =require("cors");
 const app=express();
@@ -13,7 +13,7 @@ connectDB();
 
 app.use(express.json());
 
-app.use('/',productRoutes)
+app.use('/',blogRoutes)
 
 const PORT =process.env.PORT || 5000;
 

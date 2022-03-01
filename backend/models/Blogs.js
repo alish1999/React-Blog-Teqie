@@ -1,6 +1,6 @@
 const mongoose =require("mongoose");
 
-const productSchema =new mongoose.Schema(
+const blogSchema =new mongoose.Schema(
     {
         aid: {
             type: String,
@@ -35,6 +35,6 @@ const productSchema =new mongoose.Schema(
         
     }
 )
-const Product = mongoose.model('Product', productSchema);
+const Blog = mongoose.model('blogs', blogSchema);
 
-module.exports= Product;
+module.exports= Blog;
