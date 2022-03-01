@@ -7,7 +7,6 @@ import axios from "axios"
 export default function CreateBlog()
 {
     const [input,setInput] = useState({
-        id:"",
         aid:"",
         isDraft:"",
         title:"",
@@ -41,7 +40,6 @@ export default function CreateBlog()
         <NavBar/>
         <Navigator/>
         <form className="form-group">
-        id<input onChange={handleChange} name="id"  className="form-control" ></input>
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"1"}>draft</option>

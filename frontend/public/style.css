@@ -259,7 +259,9 @@ font-family: Inter;
 font-style: normal;
 font-weight: normal;
 font-size: 25.24px;
-line-height: 150%;
+line-height: 40px;
+overflow: hidden;
+text-overflow: ellipsis;
 /* or 15px */
 
 

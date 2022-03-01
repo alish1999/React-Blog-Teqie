@@ -53,7 +53,7 @@ export default function Main()
 
             <NavBar/>
             <Navigator/>
-           {isLogged &&  //show blogs only if isLogged is true
+           {//isLogged &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>
                     {blogs}
