@@ -8,7 +8,6 @@ const blogSchema =new mongoose.Schema(
         },
         isDraft: {
             type: String,
-            default: 0,
             required:true
         },
         title: {

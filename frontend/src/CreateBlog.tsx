@@ -8,7 +8,7 @@ export default function CreateBlog()
 {
     const [input,setInput] = useState({
         aid:"",
-        isDraft:"",
+        isDraft:"0",
         title:"",
         authorName:"",
         createdDate:"",
