@@ -3,9 +3,11 @@ import Navigator from "./Navigator";
 import NavBar from "./NavBar";
 import {useState} from "react"
 import axios from "axios"
+import { useSelector } from "react-redux";
 
-export default function CreateBlog()
+export default function UpdateBlog()
 {
+    const viewById = useSelector((state : any) => state.viewById)
     const [input,setInput] = useState({
         aid:"",
         isDraft:"0",
@@ -20,8 +22,8 @@ export default function CreateBlog()
        event.preventDefault();
        
        console.log(input)
-       axios.post('/create',input)
-       alert("Blog uploaded")
+       axios.put(`/update/${viewById}`,input)
+       alert("Blog updated")
 
     }
     function handleChange(event)

@@ -35,12 +35,12 @@ export default function ViewMore()
    {
     event.preventDefault();
     navigate('/main', { replace: true });
-    axios.delete(`/delete/${viewById}`,viewById)
+    axios.delete(`/delete/${viewById}`)
     alert("Blog deleted")
    }
    function upblog(event)
    {
-       
+    navigate(`/update/${viewById}`, { replace: true });
    }
 
     return(
