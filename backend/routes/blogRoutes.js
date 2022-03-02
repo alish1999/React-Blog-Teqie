@@ -1,19 +1,15 @@
 const express =require('express');
 const router = express.Router();
 
-const {getAllBlogs,getBlogById, createBlog} =require('../controller/blogControllers');
+const {getAllBlogs,getBlogById, createBlog,deleteBlog ,updateBlog} =require('../controller/blogControllers');
 
-//@desc GET all blogs form db
-//@route GET /api/blogs
-//@access Public
+
 router.get('/allblogs',getAllBlogs);
 
 
 router.post("/create",createBlog);
-
-//@desc GET all blogs form db
-//@route GET /api/blogs/:id
-//@access Public
+router.delete('/delete/:id', deleteBlog);
+router.put('/update/:id', updateBlog);
 router.get('/:id',getBlogById);
 
 module.exports = router;

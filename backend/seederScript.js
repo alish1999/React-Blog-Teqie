@@ -4,13 +4,12 @@ const blogsData =require('./data/blogs');
 
 const connectDB =require("./config/db");
 
-const Blog =require ('./models/Blog');
+const Blog =require ('./models/Blogs');
 
 connectDB();
 
 const importData = async ()=>{
     try{
-        await Blog.deleteMany({});
         await Blog.insertMany(blogsData);
         console.log("data import success");
 

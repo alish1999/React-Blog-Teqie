@@ -2,8 +2,17 @@ import {useSelector } from "react-redux"
 import Navigator from "./Navigator";
 import NavBar from "./NavBar";
 import { useState,useEffect } from "react";
+import axios from "axios";
+import {Link} from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
+
+
+
+
+
 export default function ViewMore()
 {
+    const navigate = useNavigate()
     const viewById = useSelector((state : any) => state.viewById)
     const [datab,setBlogs]=useState({
         aid:"",
@@ -22,14 +31,27 @@ export default function ViewMore()
             }
         }).then(jsonRes=>setBlogs(jsonRes))
     })
-   
+   function delblog(event)
+   {
+    event.preventDefault();
+    navigate('/main', { replace: true });
+    axios.delete(`/delete/${viewById}`,viewById)
+    alert("Blog deleted")
+   }
+   function upblog(event)
+   {
+       
+   }
+
     return(
         <div>
         <NavBar/>
         <Navigator/>
         <div className="view">
         <img className="card--img" src={datab.imageUrl} />  
-        {datab.isDraft=="1" && <img className="card--logo" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        {datab.isDraft=="1" && <img className="card--draft" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        <button className="card--update"  onClick={upblog}  >UPDATE BLOG </button>
+        <button className="card--delete"  onClick={delblog}  >DELETE BLOG </button>
         <p className="card--text">author-id:{datab.aid} </p>
         
         <div className="card--tit">{datab.title}</div>

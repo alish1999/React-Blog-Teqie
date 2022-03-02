@@ -144,7 +144,7 @@ color: #FFFFFF;
     position: relative;
     color: #FFFFFF;
     width: 150px;
-height: 70px;
+    height: 70px;
     left:800px;
     top:10px;
     margin-right: 10px;
@@ -201,8 +201,38 @@ left: 10px;
 top: 120px;
 
 border-radius: 5px;
+
 }
-.card--logo
+.card--update{
+    position: absolute;
+    left: 700px;
+    height: 35px;
+    width: 150px;
+    top: 40px;
+    background-color:darkcyan;
+    color: white;
+  
+    border:#F55A5A;
+    cursor: pointer;
+    
+    opacity: 0.9;
+  }
+.card--delete{
+  position: absolute;
+  left: 1000px;
+  height: 35px;
+  width: 150px;
+  top: 40px;
+  background-color:crimson;
+  color: white;
+
+  border:#F55A5A;
+  cursor: pointer;
+  
+  opacity: 0.9;
+}
+
+.card--draft
 {
 position: absolute;
 width: 120px;

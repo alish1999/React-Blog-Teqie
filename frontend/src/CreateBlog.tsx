@@ -19,7 +19,6 @@ export default function CreateBlog()
     {
        event.preventDefault();
        
-       
        console.log(input)
        axios.post('http://localhost:5000/create',input)
        alert("Blog uploaded")

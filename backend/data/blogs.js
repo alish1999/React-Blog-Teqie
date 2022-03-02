@@ -1,6 +1,6 @@
 const blogs = [
     {
-        id: "1",
+     
         aid:"2",
         isDraft: "0",
         title: "Mount Fuji",
@@ -11,7 +11,7 @@ const blogs = [
         imageUrl: "https://media.istockphoto.com/photos/fuji-mountain-and-cherry-blossoms-in-spring-japan-picture-id1137578281?k=20&m=1137578281&s=612x612&w=0&h=xUs8Td53ZJihlXjf_6TrFAC2NJ8a6R25RTo3I69gN3k=",
     },
     {
-        id: "2",
+
         aid:"1",
         isDraft: "0",
         title: "Sydney opera house",
@@ -22,7 +22,7 @@ const blogs = [
         imageUrl: "https://miro.medium.com/max/4250/1*-MklWDSjKS5vWEG5ZYXCww.jpeg",
     },
     {
-        id: "3",
+
         aid:"3",
 
         isDraft: "0",
@@ -58,7 +58,7 @@ const blogs = [
         imageUrl: "https://miro.medium.com/max/4250/1*-MklWDSjKS5vWEG5ZYXCww.jpeg",
     },
     {
-        id: "6",
+
         aid:"2",
 
         isDraft: "0",

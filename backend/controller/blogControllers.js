@@ -1,9 +1,32 @@
+const blogs = require('../data/blogs');
 const Blog = require ('../models/Blogs');
+
+ const deleteBlog = async (req, res) => {
+    console.log("Blog deleted");
+    try {
+        
+        await Blog.findByIdAndDelete(req.params.id);
+     
+        res.status(200).json('blog deleted successfully');
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+const updateBlog = async(req,res) =>{
+    try{
+        await Blog.findByIdAndUpdate(req.params.id,{$set:req.body})
+        res.status(200).json('blog updated successfully');
+    }catch(error)
+    {
+        res.status(500).json(error)
+
+    }
+}
 
 const getAllBlogs = async(req,res) =>{
     try{
-        const blogs = await Blog.find({});
-        res.json(blogs)
+        const gblogs = await Blog.find({});
+        res.json(gblogs)
     }catch(error)
     {
         console.log(error);
@@ -25,9 +48,9 @@ const getAllBlogs = async(req,res) =>{
     const createBlog = async (req,res) => {
     
         try {
-            console.log("Blog create");
-            const tmpBlog = await new Blog(req.body);
-            tmpBlog.save();
+            console.log("Blog created");
+            const cBlog = await new Blog(req.body);
+            cBlog.save();
     
             res.status(200).json('Blog saved successfully');
         } catch (error) {
@@ -39,5 +62,7 @@ const getAllBlogs = async(req,res) =>{
 module.exports ={
     getAllBlogs,
     getBlogById,
-    createBlog
+    createBlog,
+    deleteBlog,
+    updateBlog
 };
