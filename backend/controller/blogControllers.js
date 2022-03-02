@@ -1,6 +1,18 @@
 const blogs = require('../data/blogs');
 const Blog = require ('../models/Blogs');
 
+const createBlog = async (req,res) => {
+    
+    try {
+        console.log("Blog created");
+        const cBlog = await new Blog(req.body);
+        cBlog.save();
+
+        res.status(200).json('Blog saved successfully');
+    } catch (error) {
+        res.status(500).json(error);
+    }
+}
  const deleteBlog = async (req, res) => {
     console.log("Blog deleted");
     try {
@@ -14,7 +26,8 @@ const Blog = require ('../models/Blogs');
 }
 const updateBlog = async(req,res) =>{
     try{
-        await Blog.findByIdAndUpdate(req.params.id,{$set:req.body})
+ 
+        await Blog.findByIdAndUpdate(req.params.id,req.body,{overwrite:true})
         res.status(200).json('blog updated successfully');
     }catch(error)
     {
@@ -45,18 +58,7 @@ const getAllBlogs = async(req,res) =>{
     
         }
     }
-    const createBlog = async (req,res) => {
-    
-        try {
-            console.log("Blog created");
-            const cBlog = await new Blog(req.body);
-            cBlog.save();
-    
-            res.status(200).json('Blog saved successfully');
-        } catch (error) {
-            res.status(500).json(error);
-        }
-    }
+
 
 
 module.exports ={
