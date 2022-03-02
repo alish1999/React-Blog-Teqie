@@ -22,6 +22,7 @@ export default function CreateBlog()
        
        console.log(input)
        axios.post('http://localhost:5000/create',input)
+       alert("Blog uploaded")
 
     }
     function handleChange(event)

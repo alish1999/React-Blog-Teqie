@@ -18,6 +18,7 @@ export default function Login()
         
         <button onClick={() => dispatch({type:"LOG"})}  >set LOGIN </button>
         <button onClick={() => dispatch({type:"LOGOUT"})}  >set LOGOUT</button>
+        
         <Link  to="/main">Login</Link>
         
         

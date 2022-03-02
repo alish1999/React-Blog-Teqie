@@ -9,7 +9,7 @@ export default function Main()
     //const myState = useSelector((state : any) => state.changeTheUser);
         const isLogged =useSelector((state : any)=>  state.logStatus)
     const [datab,setBlogs]=useState([{
-            id:"",
+            _id:"",
             aid:"",
             isDraft:"",
             title:"",
@@ -35,7 +35,7 @@ export default function Main()
             (item.isDraft=="0"&& 
             <li> 
                 <Card  
-                    key={item.id}
+                    key={item._id}
                     {...item}
                 />
             </li>
@@ -53,6 +53,7 @@ export default function Main()
 
             <NavBar/>
             <Navigator/>
+           
            {//isLogged &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>

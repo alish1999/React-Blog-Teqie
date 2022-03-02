@@ -9,7 +9,7 @@ export default function CreateBlog()
 {
     const isLogged =useSelector((state : any)=>  state.logStatus)
     const [datab,setBlogs]=useState([{
-            id:"",
+            _id:"",
             aid:"",
             isDraft:"",
             title:"",
@@ -35,7 +35,7 @@ export default function CreateBlog()
             (item.isDraft=="1"&& 
             <li> 
                 <Card  
-                    key={item.id}
+                    key={item._id}
                     {...item}
                 />
             </li>

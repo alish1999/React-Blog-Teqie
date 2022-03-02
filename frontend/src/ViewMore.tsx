@@ -6,7 +6,6 @@ export default function ViewMore()
 {
     const viewById = useSelector((state : any) => state.viewById)
     const [datab,setBlogs]=useState({
-        id:"",
         aid:"",
         isDraft:"",
         title:"",
