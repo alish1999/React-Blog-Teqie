@@ -1,10 +1,12 @@
 require('dotenv').config();
 
-const blogsData =require('./data/blogs');
+//const blogsData =require('./data/blogs');
+import blogsData from './data/blogs';
+//const connectDB =require("./config/db");
+import connectDB from './config/db';
 
-const connectDB =require("./config/db");
-
-const Blog =require ('./models/Blogs');
+//const Blog =require ('./models/Blogs');
+import Blog from './models/Blogs'
 
 connectDB();
 

@@ -1,8 +1,9 @@
 require('dotenv').config();
-const connectDB= require('./config/db');
-const blogRoutes =require('./routes/blogRoutes');
-const express = require('express');
-const cors =require("cors");
+
+import blogRoutes from './routes/blogRoutes';
+import connectDB from './config/db';
+import express from 'express';
+import cors from "cors"
 const app=express();
 app.use(cors());
 

@@ -1,7 +1,8 @@
-const blogs = require('../data/blogs');
-const Blog = require ('../models/Blogs');
-
-const createBlog = async (req,res) => {
+//const blogs = req : anyuire('../data/blogs');
+//import blogs from "'../data/blogs'"
+//const Blog = req : anyuire ('../models/Blogs');
+import Blog from "../models/Blogs"
+const createBlog = async (req : any,res : any) => {
     
     try {
         console.log("Blog created");
@@ -13,7 +14,7 @@ const createBlog = async (req,res) => {
         res.status(500).json(error);
     }
 }
- const deleteBlog = async (req, res) => {
+ const deleteBlog = async (req : any, res : any) => {
     console.log("Blog deleted");
     try {
         
@@ -24,7 +25,7 @@ const createBlog = async (req,res) => {
         res.status(500).json(error)
     }
 }
-const updateBlog = async(req,res) =>{
+const updateBlog = async(req : any,res : any) =>{
     try{
  
         await Blog.findByIdAndUpdate(req.params.id,req.body,{overwrite:true})
@@ -36,7 +37,7 @@ const updateBlog = async(req,res) =>{
     }
 }
 
-const getAllBlogs = async(req,res) =>{
+const getAllBlogs = async(req : any,res : any) =>{
     try{
         const gblogs = await Blog.find({});
         res.json(gblogs)
@@ -47,7 +48,7 @@ const getAllBlogs = async(req,res) =>{
 
     }
 }
-    const getBlogById = async(req,res) =>{
+    const getBlogById = async(req : any,res : any) =>{
         try{
             const blogs = await Blog.findById(req.params.id);
             res.json(blogs)

@@ -2,13 +2,14 @@
   "name": "backapp",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.tsx",
+  
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "start": "node backend/server.tsx",
+    "server": "ts-node backend/server.tsx",
     "client": "npm start --prefix frontend",
     "dev": "concurrently  \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seederScript.js"
+    "data:import": "node backend/seederScript.tsx"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +20,12 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.3",
     "node": "^17.4.0",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "typescript": "^4.6.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
     "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
   }

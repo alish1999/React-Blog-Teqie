@@ -1,5 +1,3 @@
-import * as React from "react"
-import ViewMore from "./ViewMore"
 import {Link} from "react-router-dom"
 import { useDispatch } from "react-redux";
 

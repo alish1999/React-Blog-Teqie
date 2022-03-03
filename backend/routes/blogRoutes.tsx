@@ -1,4 +1,5 @@
-const express =require('express');
+//const express =require('express');
+import express from "express";
 const router = express.Router();
 
 const {getAllBlogs,getBlogById, createBlog,deleteBlog ,updateBlog} =require('../controller/blogControllers');
@@ -12,4 +13,5 @@ router.delete('/delete/:id', deleteBlog);
 router.put('/update/:id', updateBlog);
 router.get('/:id',getBlogById);
 
-module.exports = router;
+//module.exports = router;
+export default router;
