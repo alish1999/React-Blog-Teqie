@@ -24,7 +24,7 @@ export default function ViewMore()
 
     })
     useEffect(()=>{
-        fetch(`/${viewById}`).then(res=>{
+        fetch(`/get/${viewById}`).then(res=>{
             if(res.ok){
                 return res.json()
             }

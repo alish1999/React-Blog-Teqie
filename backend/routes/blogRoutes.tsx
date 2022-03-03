@@ -11,7 +11,7 @@ router.get('/allblogs',getAllBlogs);
 router.post("/create",createBlog);
 router.delete('/delete/:id', deleteBlog);
 router.put('/update/:id', updateBlog);
-router.get('/:id',getBlogById);
+router.get('/get/:id',getBlogById);
 
 //module.exports = router;
 export default router;
