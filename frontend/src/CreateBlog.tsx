@@ -3,9 +3,11 @@ import Navigator from "./Navigator";
 import NavBar from "./NavBar";
 import {useState} from "react"
 import axios from "axios"
+import { useSelector } from "react-redux";
 
 export default function CreateBlog()
 {
+    const isLogged =useSelector((state : any)=>  state.logStatus)
     const [input,setInput] = useState({
         aid:"",
         isDraft:"0",
@@ -39,7 +41,7 @@ export default function CreateBlog()
         <div className="form-div">
         <NavBar/>
         <Navigator/>
-        <form className="form-group">
+        {isLogged && <form className="form-group">
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"0"}>post</option>
@@ -52,7 +54,7 @@ export default function CreateBlog()
         description<textarea className="form-control" name="description" onChange={handleChange}></textarea>
         <button className="form-button" onClick={handleClick}>Create Blog</button>
         
-        </form>
+        </form>}
         </div>
     )
 }

@@ -8,7 +8,7 @@ const dispatch =useDispatch();
     return(
     <div className="card"  >
         <img className="card--img" src={props.imageUrl} alt="Image not found"/>  
-        {props.isDraft=="1" && <img className="card--draft" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        {props.isDraft==="1" && <img className="card--draft" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
         <p className="card--text">author-name:{props.authorName} </p>
         <a className="card--link" onClick={() => dispatch({type:"GETBLOG",payload:props._id})}><Link to={`/viewmore/${props._id}`}>View More</Link></a>
         

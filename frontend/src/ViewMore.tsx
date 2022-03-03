@@ -47,8 +47,8 @@ export default function ViewMore()
         <NavBar/>
         <Navigator/>
         <div className="view">
-        <img className="card--img" src={datab.imageUrl} />  
-        {datab.isDraft=="1" && <img className="card--draft" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
+        <img className="card--img" src={datab.imageUrl} alt=""/>  
+        {datab.isDraft==="1" && <img className="card--draft" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DRAFT_ICON.png" />}
         <button className="card--update"  onClick={upblog}  >UPDATE BLOG </button>
         <button className="card--delete"  onClick={delblog}  >DELETE BLOG </button>
         <p className="card--text">author-id:{datab.aid} </p>
