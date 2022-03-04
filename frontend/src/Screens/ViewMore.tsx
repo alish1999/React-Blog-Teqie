@@ -1,6 +1,6 @@
 import {useSelector } from "react-redux"
-import Navigator from "./Navigator";
-import NavBar from "./NavBar";
+import Navigator from "../Components/Navigator";
+import NavBar from "../Components/NavBar";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';

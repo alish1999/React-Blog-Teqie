@@ -1,13 +1,13 @@
-
-import NavBar from "./NavBar"
-import Navigator from "./Navigator"
-import Card from "./Card"
+import NavBar from "../Components/NavBar"
+import Card from "../Components/Card"
+import Navigator from "../Components/Navigator"
 import { useSelector } from "react-redux"
 import { useState,useEffect } from "react"
 
-export default function CreateBlog()
+export default function Main()
 {
-    const isLogged =useSelector((state : any)=>  state.logStatus)
+    //const myState = useSelector((state : any) => state.changeTheUser);
+        const isLogged =useSelector((state : any)=>  state.logStatus)
     const [datab,setBlogs]=useState([{
             _id:"",
             aid:"",
@@ -32,7 +32,7 @@ export default function CreateBlog()
            
             <div>
             {
-            (item.isDraft=="1"&& 
+            (item.isDraft=="0"&& 
             <li> 
                 <Card  
                     key={item._id}
@@ -53,7 +53,8 @@ export default function CreateBlog()
 
             <NavBar/>
             <Navigator/>
-           {isLogged &&  //show blogs only if isLogged is 1
+           
+           {isLogged==1 &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>
                     {blogs}

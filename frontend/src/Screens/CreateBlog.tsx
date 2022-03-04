@@ -1,13 +1,13 @@
 import * as React from "react"
-import Navigator from "./Navigator";
-import NavBar from "./NavBar";
+import Navigator from "../Components/Navigator";
+import NavBar from "../Components/NavBar";
 import {useState} from "react"
 import axios from "axios"
 import { useSelector } from "react-redux";
 
-export default function UpdateBlog()
+export default function CreateBlog()
 {
-    const viewById = useSelector((state : any) => state.viewById)
+    const isLogged =useSelector((state : any)=>  state.logStatus)
     const [input,setInput] = useState({
         aid:"",
         isDraft:"0",
@@ -22,8 +22,8 @@ export default function UpdateBlog()
        event.preventDefault();
        
        console.log(input)
-       axios.put(`/update/${viewById}`,input)
-       alert("Blog updated")
+       axios.post('/create',input)
+       alert("Blog uploaded")
 
     }
     function handleChange(event)
@@ -41,7 +41,7 @@ export default function UpdateBlog()
         <div className="form-div">
         <NavBar/>
         <Navigator/>
-        <form className="form-group">
+        {isLogged && <form className="form-group">
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"0"}>post</option>
@@ -54,7 +54,7 @@ export default function UpdateBlog()
         description<textarea className="form-control" name="description" onChange={handleChange}></textarea>
         <button className="form-button" onClick={handleClick}>Create Blog</button>
         
-        </form>
+        </form>}
         </div>
     )
 }

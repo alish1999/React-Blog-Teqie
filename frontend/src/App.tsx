@@ -1,12 +1,12 @@
 import * as React from "react"
 
-import Main from "./Main"
-import Login from "./Login"
-import CreateBlog from "./CreateBlog"
+import Main from "./Screens/Main"
+import Login from "./Screens/Login"
+import CreateBlog from "./Screens/CreateBlog"
 import {Route, Routes } from 'react-router-dom';
-import ViewMore from "./ViewMore"
-import ViewDrafts from "./ViewDrafts"
-import UpdateBlog from "./UpdateBlog";
+import ViewMore from "./Screens/ViewMore"
+import ViewDrafts from "./Screens/ViewDrafts"
+import UpdateBlog from "./Screens/UpdateBlog";
 
 
 

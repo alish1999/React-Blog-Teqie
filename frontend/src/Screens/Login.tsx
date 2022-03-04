@@ -1,5 +1,5 @@
 import * as React from "react"
-import NavBar from "./NavBar"
+import NavBar from "../Components/NavBar"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
