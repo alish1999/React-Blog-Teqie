@@ -9,6 +9,7 @@ export default function Login()
     const myState = useSelector((state : any) => state.changeTheUser);
     const isLogged =useSelector((state : any)=> state.logStatus)
     const dispatch =useDispatch();
+    const current = new Date();
     return(
         <div>
         <NavBar />
@@ -19,6 +20,9 @@ export default function Login()
         <button onClick={() => dispatch({type:"LOG"})}  >set LOGIN </button>
         <button onClick={() => dispatch({type:"LOGOUT"})}  >set LOGOUT</button>
         
+        
+
+        ,
         <Link  to="/main">Login</Link>
         
         

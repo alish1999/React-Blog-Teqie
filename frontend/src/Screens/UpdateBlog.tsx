@@ -1,4 +1,3 @@
-import * as React from "react"
 import Navigator from "../Components/Navigator";
 import NavBar from "../Components/NavBar";
 import {useState} from "react"
@@ -7,13 +6,16 @@ import { useSelector } from "react-redux";
 
 export default function UpdateBlog()
 {
+    const myState = useSelector((state : any) => state.changeTheUser)
     const viewById = useSelector((state : any) => state.viewById)
+    const today = new Date();
+
     const [input,setInput] = useState({
         aid:"",
         isDraft:"0",
         title:"",
-        authorName:"",
-        createdDate:"",
+        authorName:myState,
+        createdDate:today.toLocaleString(),
         description:"",
         imageUrl:"",
     })
@@ -48,8 +50,6 @@ export default function UpdateBlog()
             <option value={"1"}>draft</option>
         </select>
         title<input className="form-control" name="title" onChange={handleChange}></input>
-        authorname<input className="form-control" name="authorName" onChange={handleChange}></input>
-        createddate<input className="form-control" name="createdDate" onChange={handleChange} type="datetime-local"></input>
         imageUrl<input className="form-control" name="imageUrl" onChange={handleChange}></input>
         description<textarea className="form-control" name="description" onChange={handleChange}></textarea>
         <button className="form-button" onClick={handleClick}>Create Blog</button>
