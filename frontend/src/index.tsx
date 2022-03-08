@@ -5,6 +5,8 @@ import { BrowserRouter} from 'react-router-dom';
 import store from "./store";
 import { Provider } from "react-redux";
 
+
+
 store.subscribe(() => console.log(store.getState()))
 /*import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';

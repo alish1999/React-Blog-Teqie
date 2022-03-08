@@ -7,15 +7,18 @@ import {Route, Routes } from 'react-router-dom';
 import ViewMore from "./Screens/ViewMore"
 import ViewDrafts from "./Screens/ViewDrafts"
 import UpdateBlog from "./Screens/UpdateBlog";
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports"
+import {withAuthenticator} from "@aws-amplify/ui-react";
+import '@aws-amplify/ui-react/styles.css';
 
+Amplify.configure(awsconfig)
 
-
-
-
-export default function App()
+function App()
 {
     
     return(
+     <div >   
         
     <Routes>
             <Route path="/" element={  <Login/>  } />
@@ -25,7 +28,10 @@ export default function App()
             <Route path="/viewmore/:id" element={<ViewMore/>} />
             <Route path="/update/:id" element={<UpdateBlog/>} />
     </Routes>
-   
+    </div>
+
     
     )
 }
+
+export default App;
