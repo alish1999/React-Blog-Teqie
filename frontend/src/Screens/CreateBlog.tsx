@@ -43,7 +43,8 @@ export default function CreateBlog()
         <div className="form-div">
         <NavBar/>
         <Navigator/>
-        {isLogged && <form className="form-group">
+        {//isLogged && 
+        <form className="form-group">
         aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"0"}>post</option>

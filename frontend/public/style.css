@@ -92,8 +92,19 @@ font-size: 23.4608px;
 line-height: 40px;
 padding-right: 300px;
 color: #FFFFFF;
+}
+.navigator--button{
+    position: absolute;
+    bottom:10px;
+    height: 35px;
+  width: 150px;
+  
+  background-color:crimson;
+  color: white;
 
-
+  border:#F55A5A;
+  cursor: pointer;
+  
 }
 .navBar{
     position: relative;

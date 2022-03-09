@@ -8,6 +8,7 @@ export default function Main()
 {
     //const myState = useSelector((state : any) => state.changeTheUser);
         const isLogged =useSelector((state : any)=>  state.logStatus)
+    
     const [datab,setBlogs]=useState([{
             _id:"",
             aid:"",
@@ -54,7 +55,7 @@ export default function Main()
             <NavBar/>
             <Navigator/>
            
-           {isLogged==1 &&  //show blogs only if isLogged is true
+           {//isLogged==1 &&  //show blogs only if isLogged is true
             <section  className="list" >
                 <ol>
                     {blogs}
