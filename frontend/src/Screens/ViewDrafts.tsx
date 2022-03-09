@@ -7,6 +7,7 @@ import { useState,useEffect } from "react"
 
 export default function CreateBlog()
 {
+    const myState = useSelector((state : any) => state.changeTheUser);
     const isLogged =useSelector((state : any)=>  state.logStatus)
     const [datab,setBlogs]=useState([{
             _id:"",
@@ -32,7 +33,7 @@ export default function CreateBlog()
            
             <div>
             {
-            (item.isDraft=="1"&& 
+            (item.isDraft=="1" && item.authorName==myState &&
             <li> 
                 <Card  
                     key={item._id}
