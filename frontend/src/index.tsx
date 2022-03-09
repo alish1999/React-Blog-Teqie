@@ -4,7 +4,10 @@ import App from "./App"
 import { BrowserRouter} from 'react-router-dom';
 import store from "./store";
 import { Provider } from "react-redux";
-
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+import '@aws-amplify/ui-react/styles.css';
+Amplify.configure(awsconfig);
 
 
 store.subscribe(() => console.log(store.getState()))
