@@ -11,7 +11,7 @@ export default function UpdateBlog()
     const today = new Date();
 
     const [input,setInput] = useState({
-        aid:"",
+      
         isDraft:"0",
         title:"",
         authorName:myState,
@@ -44,7 +44,6 @@ export default function UpdateBlog()
         <NavBar/>
         <Navigator/>
         <form className="form-group">
-        aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"0"}>post</option>
             <option value={"1"}>draft</option>

@@ -54,7 +54,7 @@ export default function CreateBlog()
 
             <NavBar/>
             <Navigator/>
-           {//isLogged &&  //show blogs only if isLogged is 1
+           {isLogged==1 &&  //show blogs only if isLogged is 1
             <section  className="list" >
                 <ol>
                     {blogs}

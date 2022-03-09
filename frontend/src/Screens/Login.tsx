@@ -1,8 +1,7 @@
-import NavBar from "../Components/NavBar"
-import { Link, useNavigate,} from "react-router-dom"
+
+import {useNavigate,} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import {useSignOut} from "../awscognito"
 import { useEffect }from "react"
 import { Auth } from "aws-amplify"
 import { withAuthenticator } from "@aws-amplify/ui-react"
@@ -44,9 +43,24 @@ function Login()
     
 
     return(
-        <div>
-        {/* <NavBar />
-        <div className="login">
+        
+       
+        
+            <div className="center">
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+
+
+     {/* <NavBar />
+        <div classNameName="login">
         
         
         <button onClick={() => dispatch({type:"LOG"})}  >set LOGIN </button>
@@ -63,8 +77,7 @@ function Login()
         <p>{`you are logged in as: ${myState} `}</p>
         <p>Login state:{isLogged }</p>
         </div> */}
-        PROCESSING
-        </div>
+    </div>
     )
 }
 

@@ -1,17 +1,10 @@
 
-//import { useDispatch } from "react-redux"
-import { Link, Navigate, useNavigate } from "react-router-dom"
+
+import { Link } from "react-router-dom"
 import { useSignOut } from "../awscognito";
-import {Auth} from "aws-amplify"
 function Navigator()
 {
-    // const dispatch = useDispatch();
-    // const navigate = useNavigate();
-    // function logout()
-    // {
-    //     signOut();
 
-    // }
     return(
   
     <ul className="navBar--navigator">
@@ -25,7 +18,7 @@ function Navigator()
             <Link className="navigator--text" to="/create">Create Blog</Link>
         </li>
         <li >
-            <Link className="navigator--button" onClick={useSignOut} to="/">logout</Link>
+            <Link className="navigator--button" onClick={useSignOut} to="/">Logout</Link>
         </li>
         {/* button to check current user
         <button onClick={()=>{

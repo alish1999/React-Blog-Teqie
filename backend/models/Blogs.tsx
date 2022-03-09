@@ -2,10 +2,6 @@ const mongoose =require("mongoose");
 
 const blogSchema =new mongoose.Schema(
     {
-        aid: {
-            type: String,
-            required:true  
-        },
         isDraft: {
             type: String,
             required:true

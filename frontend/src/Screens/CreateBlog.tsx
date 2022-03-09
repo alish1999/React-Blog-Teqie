@@ -11,7 +11,6 @@ export default function CreateBlog()
     const isLogged =useSelector((state : any)=>  state.logStatus)
     const today = new Date();
     const [input,setInput] = useState({
-        aid:"",
         isDraft:"0",
         title:"",
         authorName:myState,
@@ -43,9 +42,8 @@ export default function CreateBlog()
         <div className="form-div">
         <NavBar/>
         <Navigator/>
-        {//isLogged && 
+        {isLogged && 
         <form className="form-group">
-        aid<input className="form-control" name="aid" onChange={handleChange}></input>
         isDraft<select className="form-control" name="isDraft" onChange={handleChange}>
             <option value={"0"}>post</option>
             <option value={"1"}>draft</option>
