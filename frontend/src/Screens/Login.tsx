@@ -9,8 +9,8 @@ function Login()
     const isLogged =useSelector((state : any)=> state.logStatus)
     const dispatch =useDispatch();
     return(
-        // <Authenticator>
-        // {({signOut,user}) => (
+        <Authenticator>
+        {({signOut,user}) => (
         <div>
         <NavBar />
         <div className="login">
@@ -33,8 +33,8 @@ function Login()
         <p>Login state:{isLogged }</p>
         </div>
         </div>
-        // )}
-        // </Authenticator>
+        )}
+        </Authenticator>
     )
 }
 
