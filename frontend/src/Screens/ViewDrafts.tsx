@@ -33,7 +33,7 @@ export default function CreateBlog()
            
             <div>
             {
-            (item.isDraft=="1" && item.authorName==myState &&
+            (item.authorName==myState &&
             <li> 
                 <Card  
                     key={item._id}

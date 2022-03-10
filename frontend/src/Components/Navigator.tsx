@@ -12,7 +12,7 @@ function Navigator()
             <Link className="navigator--text" to="/main">Home</Link>
         </li>
         <li >
-            <Link className="navigator--text" to="/viewdrafts">View Drafts</Link>
+            <Link className="navigator--text" to="/viewdrafts">Your Blogs</Link>
         </li>
         <li >
             <Link className="navigator--text" to="/create">Create Blog</Link>

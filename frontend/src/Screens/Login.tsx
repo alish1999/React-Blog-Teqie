@@ -37,7 +37,7 @@ function Login()
         }
         catch(error)
         {
-            console.log("err1")
+            console.log("logging out")
         }
         },[])
     
